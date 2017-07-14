@@ -116,8 +116,9 @@ export default {
     },
     mounted() {
         $(document).ready(function(){
-            console.log($('.collapsible').collapsible());
-            $('.collapsible').collapsible();
+            setTimeout(function() {
+                $('.collapsible').collapsible();
+            },500)
         });
     },
     created() {
@@ -143,6 +144,12 @@ export default {
         min-height: 0rem;
         line-height: 1.5rem;
         padding: 15px;
+    }
+
+    .collapsible-body {
+        .btn {
+            min-width: inherit;
+        }
     }
     
 </style>
